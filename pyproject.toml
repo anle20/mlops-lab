@@ -1,0 +1,35 @@
+[project]
+name = "mlops-lab"
+version = "0.1.0"
+description = "MLOps learning lab: from a scikit-learn model to a monitored production service"
+requires-python = ">=3.10"
+dependencies = [
+    "scikit-learn>=1.4",
+    "pandas>=2.0",
+    "joblib>=1.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+    "pre-commit>=3.7",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
