@@ -1,0 +1,6 @@
+model:
+  c: 1.0          # inverse regularization strength of LogisticRegression
+data:
+  test_size: 0.2
+  seed: 42
+output_dir: artifacts
