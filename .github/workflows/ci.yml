@@ -32,7 +32,7 @@ jobs:
         run: python -m mlops_lab.train
 
       - name: Predict on sample
-        run: python -m mlops_lab.predict --input "sample_input.csv"
+        run: python -m mlops_lab.predict --input examples/sample.csv
 
       - name: Upload model artifacts
         uses: actions/upload-artifact@v4
